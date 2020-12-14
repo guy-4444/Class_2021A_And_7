@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="20dp"
+    android:elevation="5dp"
+    app:cardElevation="5dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/post_IMG_user"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            android:background="#FFF000"
+            android:src="@drawable/img_avatar" />
+
+        <TextView
+            android:id="@+id/post_LBL_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/post_IMG_user"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/post_IMG_user"
+            android:text="Israel Israel"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/post_LBL_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_LBL_author"
+            android:layout_alignStart="@id/post_LBL_author"
+            android:layout_marginTop="4dp"
+            android:text="0 minutes ago"
+            android:textColor="#989898"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/post_LBL_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_IMG_user"
+            android:layout_alignStart="@id/post_IMG_user"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="Content\nContent\nContent\nContent\nContent"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/post_IMG_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_LBL_content"
+            android:layout_alignStart="@id/post_IMG_user"
+            android:layout_marginTop="4dp"
+            android:adjustViewBounds="true"
+            android:background="#FFF000"
+            android:src="@drawable/map" />
+
+        <TextView
+            android:id="@+id/post_LBL_likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/post_IMG_image"
+            android:layout_alignStart="@id/post_IMG_image"
+            android:layout_marginTop="4dp"
+            android:text="0 Likes"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/post_BTN_report"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Report"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
